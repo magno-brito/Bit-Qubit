@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Mecânica Quântica</div>
+        <div class="cost">1</div>
+        <div class="image">
+            <img src="/popups/img/quantum_mechanics.jpg" alt="Quantum Mechanics Image">
+        </div>
+        <div class="description">
+            <p>A mecânica quântica explora o comportamento das partículas em escala subatômica, revelando fenômenos como a dualidade onda-partícula e o entrelaçamento. Ela se diferencia de outras teorias por suas estranhezas que não são presentes no mundo macroscópico.</p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            // Envia um evento para informar ao jogo que o popup deve ser fechado
+            if (window.parent && window.parent.closePopup) {
+                window.parent.closePopup();
+            }
+        }
+    </script>
+</body>
+</html>

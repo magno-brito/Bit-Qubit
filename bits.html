@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits & Qubits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin-left: 220px;
+      font-family: 'Times New Roman', Times, serif; 
+      font-size: 10pt;
+
+
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1px;
+    }
+
+    .col-md-6 {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+
+    .text-container {
+      color: rgb(1, 56, 5);
+      text-align: justify;
+      font-size: 12pt;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-container img {
+      width: 100px;
+      height: auto;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      float: left;
+      margin-top: 5px;
+    }
+
+    h3 {
+      color: rgb(1, 56, 5);
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .two-columns .col-md-6 {
+      width: 48%;
+    }
+
+    img:hover{
+      transform: scale(1.15);
+    }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar-vertical">
+  <a class="navbar-brand" href="#">
+    <img src="/img/logo.png" alt="Logo">
+  </a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/inicial.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="/bits.html">Bits</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_classicas.html">Portas Clássicas</a></li>
+    <li class="nav-item"><a class="nav-link" href="qubit.html">Qubits</a></li>
+    <li class="nav-item"><a class="nav-link" href="esfera_bloch.html">Esfera de Bloch</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_quanticas.html">Portas Quânticas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="two-columns">
+    <div class="col-md-6">
+      <div class="text-container">
+        <img style="margin-left: 170px; width: 150px; margin-bottom: 40px" src="img/bit.png" >
+        <p>O bit é a unidade fundamental da <b>computação clássica</b>, representando a menor quantidade de informação, podendo assumir os valores <b>0</b> ou <b>1</b>. Ele serve como base para <b>operações lógicas e aritméticas</b> em sistemas digitais, formando a espinha dorsal de processadores, memórias e todo o funcionamento de computadores clássicos.</p>
+
+        <p><img src="img/valvula.png" alt="Exemplo 1">A história dos bits começa com as <b>válvulas eletrônicas</b>, inventadas no início do século XX. Elas eram usadas para controlar a passagem de corrente elétrica, permitindo que os circuitos estivessem "ligados" (1) ou "desligados" (0). Esse <b>comportamento binário</b>, essencial para a computação, pavimentou o caminho para os sistemas digitais. As válvulas foram fundamentais na criação dos primeiros computadores eletrônicos, como o ENIAC, no final da década de 1940. Com o tempo, as válvulas deram lugar aos transistores, menores e mais eficientes, mas a ideia do bit binário permaneceu central na computação moderna.</p>
+        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="text-container">
+
+        <p><img src="img/transistor.png" alt="Exemplo 3">Hoje, os <b>transistores</b> são usados para representar os bits controlando a passagem de corrente elétrica em circuitos. Quando a corrente flui, o estado é "1"; quando bloqueada, é "0". Esses pequenos interruptores são os blocos fundamentais em processadores e memórias, permitindo operações digitais rápidas e confiáveis.</p>
+
+       
+        <p><img src="img/discos.png" alt="Exemplo 3">Nos dispositivos de armazenamento, como <b>discos rígidos</b>, os bits são gravados magneticamente, com polaridades distintas para representar 0 e 1. No entanto, a computação clássica é <b>limitada</b> porque só processa um valor binário por vez em cada bit, e a capacidade de <b>miniaturização dos transistores está se aproximando de um limite físico</b> . Além disso, a manipulação de grandes volumes de dados e a execução de cálculos complexos tornam-se cada vez mais desafiadoras nesse modelo. Essa limitação impulsiona o desenvolvimento da computação quântica, que utiliza qubits capazes de representar superposição de estados, aumentando exponencialmente o poder de processamento e eficiência em comparação aos sistemas clássicos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits & Qubits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav class="navbar-vertical">
+  <a class="navbar-brand" href="#">
+    <img src="/img/logo.png" alt="Logo">
+  </a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/inicial.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="/bits.html">Bits</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_classicas.html">Portas Clássicas</a></li>
+    <li class="nav-item"><a class="nav-link" href="qubit.html">Qubits</a></li>
+    <li class="nav-item"><a class="nav-link" href="esfera_bloch.html">Esfera de Bloch</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_quanticas.html">Portas Quânticas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
+</ul>
+</nav>
+
+<div class="content">
+    <h2 style="font-weight: bold; text-align: center; margin-bottom: 50px; margin-top: 10px;color:rgb(1, 56, 5)">Principais Portas Lógicas Clássicas</h2>
+    <div class="card-grid" id="cardGrid">
+        
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="/portas_classicas/and.png" alt="Hadamard" class="hadamard-gif">
+            <p>AND</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/and_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+
+                <h2>AND</h2>
+                <p >A porta lógica AND é um componente fundamental da computação digital. Ela realiza uma operação booleana onde a saída é verdadeira (1) apenas se todas as entradas forem verdadeiras (1).  É amplamente usada em circuitos para tomar decisões baseadas em múltiplas condições e pode ser utilizada como o produto (multiplicação) entre dois bit.</p>
+
+            </div>
+
+        </div>
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="/portas_classicas/or.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>OR</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/or_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>OR</h2>
+                <p>A porta lógica OR é um elemento essencial da computação digital. Ela executa a operação booleana "OU", na qual a saída é verdadeira (1) se pelo menos uma das entradas for verdadeira (1). É amplamente utilizada em circuitos para avaliar condições onde basta que uma das opções seja atendida. É crucial para sistemas de decisão e controle em eletrônica. Representa a soma aritmética entre dois bits.</p>
+            </div>
+        </div>
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="portas_classicas/not.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>NOT</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/not_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>NOT</h2>
+                <p>A porta lógica NOT é uma das mais simples na computação digital. Ela realiza a operação booleana de negação, onde a saída é sempre o oposto do valor de entrada. Se a entrada for verdadeira (1), a saída será falsa (0), e vice-versa. Usada para inverter sinais, é fundamental em sistemas que dependem de lógica condicional ou complementação de valores.</p>
+            </div>
+        </div>
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="portas_classicas/nand.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>NAND</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/nand_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>NAND</h2>
+                <p>A porta lógica NAND combina as operações AND e NOT, sendo amplamente utilizada na computação digital. Sua saída é verdadeira (1) exceto quando todas as entradas forem verdadeiras (1), caso em que a saída será falsa (0). Versátil e eficiente, é usada na construção de circuitos mais complexos, sendo capaz de replicar outras portas lógicas, como OR e AND, em diversas aplicações.</p>
+            </div>
+        </div>
+ 
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="portas_classicas/nor.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>NOR</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/nor_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>NOR</h2>
+                <p>A porta lógica NOR combina as operações OR e NOT, sendo essencial na computação digital. Sua saída é verdadeira (1) apenas quando todas as entradas são falsas (0); caso contrário, a saída será falsa (0). Amplamente utilizada, a porta NOR é funcionalmente completa, podendo ser usada para construir outras portas lógicas, como AND, OR e NOT, em circuitos complexos.</p>
+            </div>
+        </div>
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="portas_classicas/xor.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>XOR</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/xor_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>XOR</h2>
+                <p>A porta lógica XOR, ou "OU exclusivo", realiza uma operação booleana onde a saída é verdadeira (1) apenas se as entradas forem diferentes. Se ambas as entradas forem iguais, a saída será falsa (0). É amplamente usada em circuitos digitais para comparações e cálculos, sendo fundamental em operações como somadores binários e criptografia.</p>
+            </div>
+        </div>
+        <div class="card-classico" onclick="openPopup(this)">
+            <img src="portas_classicas/xnor.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>XNOR</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/portas_classicas/xnor_table.png" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>XNOR</h2>
+                <p>A porta lógica XNOR, ou "OU exclusivo negado", é a inversa da XOR. Sua saída é verdadeira (1) apenas quando as entradas são iguais, sejam ambas verdadeiras (1) ou ambas falsas (0). É usada em circuitos digitais para detectar igualdade entre sinais e em sistemas que requerem validação ou verificação de paridade, sendo essencial em diversas aplicações eletrônicas.</p>
+            </div>
+        </div>
+       
+
+        
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content-classico">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Ícone do Card">
+        <h2 id="popup-title">Título</h2>
+        <p id="popup-description">Descrição detalhada</p>
+    </div>
+</div>
+
+<script>
+    function openPopup(card) {
+       
+        const cardContent = card.querySelector('.card-content');
+        const title = cardContent.querySelector('h2').innerText;
+        const description = cardContent.querySelector('p').innerText;
+        const imgSrc = card.querySelector('#gif').src; 
+
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-description').innerText = description;
+        document.getElementById('popup-img').src = imgSrc;
+
+        document.getElementById('popup').style.display = 'flex';
+        document.getElementById('popup-img').style.height = '200px';
+        document.getElementById('popup-img').style.width = '200px';
+
+
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+
+
+</body>
+</html>

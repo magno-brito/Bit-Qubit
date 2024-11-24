@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Entrelaçamento <br>
+            Quântico</div>
+        <div class="cost">6</div>
+        <div class="image">
+            <img src="/popups/img/entrelacamento.png" >
+        </div>
+        <div class="description">
+            <p>O entrelaçamento quântico ocorre quando duas ou mais partículas são geradas, interagem ou compartilham proximidade de uma forma que suas propriedades quânticas tornam-se interdependentes. Essa conexão permanece mesmo quando as partículas estão separadas por grandes distâncias.</p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

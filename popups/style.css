@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.card {
+    width: 300px;
+    height: 500px; /* Altura fixa para uniformizar as cartas */
+    background: #34495e;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.card .cost {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.card .image {
+    flex-grow: 1; /* Garante que a imagem ocupe espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.card .image img {
+    width: 100%;
+    height: 200px; /* Altura fixa para uniformizar as imagens */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.card .stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card .stats .power {
+    background-color: #333;
+    border: 2px solid white;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.card .stats .type {
+    background-color: #333;
+    border: 2px solid white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.card .description {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #555;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.actions button {
+    background-color: green; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid white; 
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.actions button:hover {
+    background-color: rgb(5, 56, 5);
+}
+
+.actions button:active {
+    background-color: green; 
+}

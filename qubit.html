@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits & Qubits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin-left: 220px;
+      font-family: 'Times New Roman', Times, serif; 
+      font-size: 10pt;
+
+
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1px;
+    }
+
+    .col-md-6 {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+
+    .text-container {
+      color: purple;
+      text-align: justify;
+      font-size: 12pt;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-container img {
+      width: 100px;
+      height: auto;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      float: left;
+      margin-top: 5px;
+    }
+
+    h3 {
+      color: rgb(39, 4, 39);
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .two-columns .col-md-6 {
+      width: 48%;
+    }
+
+    img:hover{
+      transform: scale(1.15);
+    }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar-vertical">
+  <a class="navbar-brand" href="#">
+    <img src="/img/logo.png" alt="Logo">
+  </a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/inicial.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="/bits.html">Bits</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_classicas.html">Portas Clássicas</a></li>
+    <li class="nav-item"><a class="nav-link" href="qubit.html">Qubits</a></li>
+    <li class="nav-item"><a class="nav-link" href="esfera_bloch.html">Esfera de Bloch</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_quanticas.html">Portas Quânticas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="two-columns">
+    <div class="col-md-6">
+      <div class="text-container">
+        <img style="margin-left: 170px; width: 170px; margin-bottom: 40px" src="img/qubit.png" >
+        <p>O <b>qubit (quantum bit)</b> é a unidade fundamental de informação na computação quântica, similar ao bit na computação clássica, mas com a diferença de que pode representar <b>simultaneamente</b> 0 e 1 devido à <b>superposição</b>. Isso permite que os qubits realizem múltiplos cálculos ao mesmo tempo, aumentando significativamente a capacidade de processamento.</p>
+
+        <p><img src="img/feynman.png" alt="Exemplo 1">Richard Feynman, físico renomado, é considerado o <b>pai da computação quântica</b> devido às suas ideias revolucionárias nos anos 1980. Ele foi o primeiro a sugerir que sistemas quânticos poderiam ser usados para <b>simular outros sistemas quânticos</b>  de forma mais eficiente do que os computadores clássicos. Suas teorias sobre a natureza quântica das partículas inspiraram o desenvolvimento de <b>algoritmos quânticos</b> e a criação de computadores quânticos, transformando a computação como conhecemos.</p>
+        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="text-container">
+
+        <p><img src="img/gato_caixa.png" >A superposição é um \<b>princípio quântico</b> onde uma partícula pode estar em múltiplos estados ao mesmo tempo, até ser observada. O famoso experimento mental do <b>gato de Schrödinger</b> ilustra isso: um gato dentro de uma caixa pode estar simultaneamente vivo e morto até ser observado. No contexto dos qubits, isso significa que eles podem representar 0 e 1 ao mesmo tempo, permitindo <b>cálculos paralelos</b>. A superposição é, portanto, essencial para a potência da computação quântica.</p>
+
+       
+        <p><img src="img/ibm.png" alt="Exemplo 3">A construção de computadores quânticos envolve criar sistemas que possam controlar e manipular qubits de forma precisa. Isso é feito utilizando tecnologias como  <b>circuitos supercondutores, trampas de íons ou chips fotônicos</b> , cada uma com seus desafios de <b>estabilidade e coerência </b> quântica. A <b>supremacia quântica</b> é alcançada quando um computador quântico resolve uma tarefa além da capacidade dos supercomputadores clássicos, como a demonstração feita pelo Google em 2019. Esse marco sugere que a computação quântica pode, em breve, transformar setores como criptografia e simulação de materiais, desafiando os limites da computação convencional.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

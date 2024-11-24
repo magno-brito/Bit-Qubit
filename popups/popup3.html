@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Qubit</div>
+        <div class="cost">3</div>
+        <div class="image">
+            <img src="/popups/img/qubit.png" alt="Vampire Image">
+        </div>
+        <div class="description">
+            <p>O qubit é a unidade fundamental de informação na computação quântica, análogo ao bit na computação clássica, mas com características únicas. Diferente de um bit clássico, que pode ser apenas 0 ou 1, o qubit pode estar em uma superposição de ambos os estados simultaneamente, graças às propriedades quânticas. Isso permite que ele represente 0, 1 ou qualquer combinação desses estados ao mesmo tempo. </p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

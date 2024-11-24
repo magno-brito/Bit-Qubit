@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Gato de Schrödinger</div>
+        <div class="cost">10</div>
+        <div class="image">
+            <img src="/popups/img/schrodinger_cat.png">
+        </div>
+        <div class="description">
+            <p>O experimento do gato de Schrödinger é uma metáfora para ilustrar a superposição quântica. Um gato é colocado em uma caixa com um dispositivo que pode matá-lo, ativado pela decaída de um átomo radioativo. Até a caixa ser aberta, o gato está simultaneamente vivo e morto. Isso destaca a natureza paradoxal da mecânica quântica e do colapso da função de onda.</p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

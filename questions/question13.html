@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .quiz-container {
+            width: 350px;
+            background: linear-gradient(135deg, #8e44ad, #3498db);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+        }
+        .timer {
+            background-color: #d3e4ff;
+            color: #000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        .question {
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: left;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 12px;
+        }
+        .option {
+            background-color: #f1f7ff;
+            border: 1px solid #d0e2ff;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #8e44ad;
+        }
+        .footer {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        #feedback {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <h2>Responda a pergunta para passar de nível</h2>
+            <div class="logo">
+                <img src="/img/logo1.png" alt="Logo" width="60px" height="60px">
+            </div>
+        </div>
+        <div class="question">
+            <p>Como a porta AND é usada na multiplicação binária?</p>
+        </div>
+        <div class="options">
+            <div class="option" >Retorna 0 se ambos valores forem 1</div>
+            <div class="option"  >Retorna 1 se ambos valores forem 0</div>
+            <div class="option" id="correta"> Retorna 1 se ambos valores forem 1</div>
+            <div class="option" >Retorna 1 se algum valor for 0</div>
+        </div>
+        <div class="footer">13 de 17 Questões</div>
+        <div id="feedback"></div>
+        <p id="feedback"></p> 
+    </div>
+
+   
+</body>
+</html>

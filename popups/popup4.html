@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Porta Lógica AND</div>
+        <div class="cost">4</div>
+        <div class="image">
+            <img src="/popups/img/and.png" alt="Vampire Image">
+        </div>
+        <div class="description">
+            <p>A porta lógica AND é um dos principais componentes em circuitos digitais. Ela recebe duas ou mais entradas e retorna "1" apenas quando todas as entradas são "1". Se qualquer uma das entradas for "0", a saída será "0". Essa operação é fundamental, pois representa a multiplicação matemática na computação quântica. </p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

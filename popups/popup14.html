@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Resfriamento</div>
+        <div class="cost">14</div>
+        <div class="image">
+            <img src="/popups/img/computer.png" alt="Vampire Image">
+        </div>
+        <div class="description">
+            <p>O resfriamento é crucial para o funcionamento dos computadores quânticos, pois as operações quânticas são altamente sensíveis a ruídos e interferências térmicas. Manter os qubits em temperaturas próximas do zero absoluto reduz o risco de decoerência e melhora a estabilidade dos cálculos, tornando-os mais precisos.</p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubit</title>
+   <link rel="stylesheet" href="/popups/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="title">Decoerência</div>
+        <div class="cost">9</div>
+        <div class="image">
+            <img src="/popups/img/decoerencia.png" alt="Vampire Image">
+        </div>
+        <div class="description">
+            <p>A decoerência de um qubit ocorre quando ele perde sua coerência quântica devido à interação com o ambiente. Isso significa que o estado de superposição se degrada, tornando-se um estado clássico. É um dos maiores desafios na computação quântica, pois limita a capacidade de realizar cálculos precisos e confiáveis.</p>
+        </div>
+        <div class="actions">
+            <button onclick="closeCard()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeCard() {
+            document.querySelector('.card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

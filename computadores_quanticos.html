@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits & Qubits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif; 
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .circle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .circle:hover {
+      transform: scale(1.2);
+    }
+
+
+    .circle0 {
+      top: 30%;
+      left: -20%;
+      background-color: #e73cd9;
+    }
+    .circle1 {
+      top: 30%;
+      left: 80%;
+      background-color: #42e73c;
+    }
+
+    .circle2 {
+      top: 5%;
+      left: 45%;
+      background-color: #f1c40f;
+    }
+
+    .circle3 {
+      top: 52%;
+      left: 70%;
+      background-color: #0fa9f1;
+    }
+
+    .circle4 {
+      top: 65%;
+      left: 23%;
+      background-color: #115a8b;
+    }
+
+    .circle5 {
+      top: 87%;
+      left: 46%;
+      background-color: #022950;
+    }
+
+    /* Estilos do popup */
+    .popup-quantico {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      z-index: 1000;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .popup-quantico-title {
+      font-family: 'Times New Roman', Times, serif; 
+      font-size: 20px;
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 10px;
+    }
+
+    .popup-quantico-text {
+      font-family: 'Times New Roman', Times, serif; 
+      color: #712592;
+      text-align: justify;
+      font-weight:100;
+    }
+
+    .popup-quantico .close-btn {
+      margin-top: 15px; /* Já existe */
+      padding: 5px 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: block; /* Garante que o botão ocupe toda a largura disponível */
+      margin-left: auto; /* Centraliza horizontalmente */
+      margin-right: auto;
+      position: relative; /* Evita interferência de posições absolutas */
+    }
+
+    .popup-quantico .close-btn:hover {
+      background-color: #c0392b;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+  
+   .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 255, 0.5); 
+    border-radius: 50%;
+  }
+
+  
+
+  @keyframes moveParticles {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(var(--moveX), var(--moveY));
+    }
+    100% {
+      transform: translate(var(--moveX), var(--moveY));
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar-vertical">
+  <a class="navbar-brand" href="#">
+    <img src="/img/logo.png" alt="Logo">
+  </a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/inicial.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="/bits.html">Bits</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_classicas.html">Portas Clássicas</a></li>
+    <li class="nav-item"><a class="nav-link" href="qubit.html">Qubits</a></li>
+    <li class="nav-item"><a class="nav-link" href="esfera_bloch.html">Esfera de Bloch</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_quanticas.html">Portas Quânticas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  
+ 
+  <div class="image-container">
+    <img src="/img/arquitetura_computador.png" alt="Arquitetura do Computador">
+    <div class="circle circle0" onclick="showPopup('Arquitetura Simplificada.', 'Empresas como IBM, Amazon e Google são as pioneiras no desenvolvimento de computadores quânticos. Com a possibilidade de criar máquinas mais rápidas e extremamente eficientes, essas grandes big tech investem constantemente em pesquisas neste ramo. O Sycamore é um computador quântico criado pelo Google e apresenta uma arquiterua semelhante a mostrada na figura ao lado. Vale ressaltar a a arquitetura física dessas máquinas é muito mais complexa do que a mostrada na figura.')">Info</div>
+
+    <div class="circle circle1" onclick="showPopup('Arquitetura Simplificada.', 'Empresas como IBM, Amazon e Google são as pioneiras no desenvolvimento de computadores quânticos. Com a possibilidade de criar máquinas mais rápidas e extremamente eficientes, essas grandes big tech investem constantemente em pesquisas neste ramo. O Sycamore é um computador quântico criado pelo Google e apresenta uma arquiterua semelhante a mostrada na figura ao lado. Vale ressaltar a a arquitetura física dessas máquinas é muito mais complexa do que a mostrada na figura.')">300K</div>
+
+    <div class="circle circle2" onclick="showPopup('Comunicação Ambiente', 'Esta parte localiza-se na parte superior da estrutura. Contém o computador de controle e o sistema de interconexões metálicas de baixa densidade. Garante a interface entre o operador humano (ou software) e o hardware quântico. O computador de controle emite comandos e recebe os resultados do processamento quântico. Opera à temperatura ambiente (~25°C). É composto por sistemas convencionais que não requerem resfriamento extremo.')">300K</div>
+    <div class="circle circle1" onclick="showPopup('Interconexões de Baixa Densidade', ' É a camada intermediária onde os sinais são transmitidos do computador clássico para as camadas resfriadas. A temperatura aqui é 77 K (-196°C). Conecta o sistema clássico à hierarquia de controle do computador quântico. Conduz sinais elétricos enquanto minimiza a perda de energia. Utiliza metais como cobre ou alumínio devido à boa condutividade. Precisa operar em temperaturas criogênicas para evitar superaquecimento.')">77K</div>
+    <div class="circle circle3" onclick="showPopup('Controle do Computador e Hierarquia de Memória ', ' Situada na faixa de 4 K (-269°C), próxima ao zero absoluto. Contém fios supercondutores e sistemas de controle altamente densos.  Traduz os sinais clássicos em comandos quânticos que controlam diretamente os qubits. Regula as operações quânticas, como portas lógicas e medições. Utiliza fios supercondutores para transmitir sinais sem resistência elétrica. Opera com baixíssimo consumo de energia devido às temperaturas extremamente baixas.')">4K</div>
+    <div class="circle circle4" onclick="showPopup('Fiação de Controle de Alta Densidade', '  Localizada na camada de 0.1 K (-273.05°C). Representa as conexões internas que levam sinais diretamente aos qubits. Facilita a comunicação direta e precisa entre os sistemas de controle e os qubits. Evita perdas e interferências no sinal. Fiação supercondutora projetada para lidar com altas densidades de sinais sem aquecimento. Exige isolamento térmico extremo para evitar que o calor afete os qubits.')">0.1K</div>
+    <div class="circle circle5" onclick="showPopup('Substrato Quântico ',' É a base do sistema, operando em 20 mK (~0.02 K), praticamente no zero absoluto. Contém os qubits supercondutores responsáveis pelo processamento quântico. Realiza operações quânticas como superposição, emaranhamento e portas lógicas quânticas. Armazena e manipula a informação quântica.Altamente sensível a perturbações térmicas, ruído elétrico e radiação. Mantida em temperaturas extremamente baixas para garantir a coerência dos qubits e evitar a decoerência. Estruturada com materiais como alumínio ou nióbio em substratos de silício.')">20mK</div>
+  </div>
+</div>
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup-quantico" id="popup-quantico">
+  <div class="popup-quantico-title" id="popup-quantico-title"></div>
+  <div class="popup-quantico-text" id="popup-quantico-text"></div>
+  <button class="close-btn" onclick="closePopup()">Fechar</button>
+</div>
+
+<script>
+  
+  function createParticles(numParticles) {
+    const container = document.querySelector('.image-container');
+    
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      const top = Math.random() * 100;
+      const left = Math.random() * 100;
+      
+      particle.style.top = top + '%';
+      particle.style.left = left + '%';
+      
+      container.appendChild(particle);
+      animateParticle(particle);
+    }
+  }
+
+  function animateParticle(particle) {
+    const speed = Math.random() * 2 + 1; 
+    let posX = parseFloat(particle.style.left);
+    let posY = parseFloat(particle.style.top);
+    
+    const directionX = (Math.random() * 2 - 1) * speed;  
+    const directionY = (Math.random() * 2 - 1) * speed;
+
+    function move() {
+      posX += directionX;
+      posY += directionY;
+      
+      if (posX > 200) posX = 0;
+      if (posX < -100) posX = 100;
+      if (posY >200) posY = 0;
+      if (posY < -100) posY = 100;
+      
+      particle.style.left = posX + '%';
+      particle.style.top = posY + '%';
+      
+      requestAnimationFrame(move);
+    }
+    move();
+  }
+
+  createParticles(100);
+  function showPopup(title, text) {
+    document.getElementById('popup-quantico-title').textContent = title;
+    document.getElementById('popup-quantico-text').textContent = text;
+    document.getElementById('popup-quantico').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  function closePopup() {
+    document.getElementById('popup-quantico').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

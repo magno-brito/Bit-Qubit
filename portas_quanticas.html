@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bits & Qubits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav class="navbar-vertical">
+  <a class="navbar-brand" href="#">
+    <img src="/img/logo.png" alt="Logo">
+  </a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/inicial.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="/bits.html">Bits</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_classicas.html">Portas Clássicas</a></li>
+    <li class="nav-item"><a class="nav-link" href="qubit.html">Qubits</a></li>
+    <li class="nav-item"><a class="nav-link" href="esfera_bloch.html">Esfera de Bloch</a></li>
+    <li class="nav-item"><a class="nav-link" href="portas_quanticas.html">Portas Quânticas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
+    <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
+</ul>
+</nav>
+
+<div class="content">
+    <h2 style="font-weight: bold; text-align: center; margin-bottom: 50px; margin-top: 10px;color:rgb(73, 1, 73)">Principais Portas Lógicas Quânticas</h2>
+    <div class="card-grid" id="cardGrid">
+        
+        <div class="card" onclick="openPopup(this)">
+            <img src="/esfera/hadamard_logo.png" alt="Hadamard" class="hadamard-gif">
+            <p>Hadamard</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/hadamard.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+
+                <h2>Hadamard</h2>
+                <p >A porta lógica de Hadamard é uma porta quântica que transforma um qubit de estado base (0 ou 1) em uma superposição dos dois estados. Quando aplicada, ela cria um estado quântico igualitário, com amplitudes iguais para 0 e 1, gerando uma interferência. A porta é crucial em algoritmos quânticos, como o algoritmo de Grover, pois permite a exploração simultânea de múltiplos estados. Na imagem acima é possível ver que ao aplicar a porta H, o vetor do qubit vai para o estado intermediário de 0 e 1, gerando assim uma superposição desses estados.</p>
+
+            </div>
+
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/pauli_x_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Pauli-X</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/pauli_x.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>Pauli-X</h2>
+                <p>A porta quântica Pauli-X, também conhecida como porta X ou operador NOT quântico, é uma das operações fundamentais em computação quântica. Sua principal função é inverter o estado de um qubit, funcionando de maneira análoga ao operador NOT da computação clássica. Enquanto um operador NOT clássico inverte um bit (transformando 0 em 1 e 1 em 0), a porta Pauli-X atua nos estados quânticos ∣0⟩ e ∣1⟩, trocando-os de forma equivalente: ∣0⟩ torna-se ∣1⟩ e vice-versa.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/pauli_y_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Pauli-Y</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/pauli_y.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>Pauli-Y</h2>
+                <p>A porta quântica Pauli-Y é uma operação fundamental que combina inversão e rotação no estado de um qubit. Ela transforma o estado 0 em i vezes o estado 1 e o estado 1 em -i vezes o estado 0, onde i representa a unidade imaginária. Isso significa que, além de trocar os estados, também altera suas fases. Essencial em rotações no eixo Y da esfera de Bloch, é usada em algoritmos quânticos para manipulação precisa.</p>
+            </div>
+        </div>
+        <!-- Segundo bloco de cards -->
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/pauli_z_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Pauli-Z</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/pauli_z.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>Pauli-Z</h2>
+                <p>A porta quântica Pauli-Z é uma operação que altera a fase de um qubit sem modificar sua probabilidade. Ela mantém o estado 0 inalterado, mas transforma o estado 1 no seu oposto, ou seja, -1 vezes o estado 1. Essa mudança de fase é crucial para rotações no eixo Z da esfera de Bloch e para o controle preciso de estados em algoritmos quânticos.</p>
+            </div>
+        </div>
+ 
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/t_gate_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>T</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/t.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>T</h2>
+                <p>A porta quântica T realiza uma rotação de fase no qubit alvo. Ela é equivalente à porta RZ com um ângulo de rotação de 45 graus (pi/4). Essencial em computação quântica, é usada para criar operações mais complexas e, combinada com outras portas, permite implementar circuitos universais quânticos.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/s_gate_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>S</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/s.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>S</h2>
+                <p>A porta quântica S aplica uma rotação de fase ao qubit. Ela deixa o estado 0 inalterado e adiciona uma fase de i (unidade imaginária) ao estado 1. É amplamente usada em algoritmos quânticos para manipular fases, sendo fundamental em operações que envolvem controle de interferência quântica.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/i_gate_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>I</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/i.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>I</h2>
+                <p>A porta quântica I, também conhecida como porta identidade, deixa o estado de um qubit inalterado. Ela atua como uma operação neutra, mantendo o estado do qubit exatamente igual, seja ele 0 ou 1. Embora não cause mudanças nos estados, a porta I é essencial em circuitos quânticos, garantindo a continuidade das operações sem modificações.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/rz_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>RZ</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/rz.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>RZ</h2>
+                <p>A porta quântica RZ realiza uma rotação de fase no qubit alvo ao redor do eixo Z da esfera de Bloch. Ela aplica uma fase ao estado 1, enquanto o estado 0 permanece inalterado. O ângulo da rotação é especificado pelo parâmetro fornecido. Essa operação é importante para ajustes finos em algoritmos quânticos, controlando a interferência entre estados.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/rx_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>RX</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/rx.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>RX</h2>
+                <p>A porta quântica RX realiza uma rotação no qubit alvo ao redor do eixo X da esfera de Bloch. Ela transforma o estado do qubit aplicando um ângulo de rotação especificado. Essa operação altera os coeficientes dos estados 0 e 1 de forma a gerar superposição. A porta RX é crucial para manipular estados quânticos em algoritmos que exigem controle preciso de rotações.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/ry_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>RY</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/ry.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>RY</h2>
+                <p>A porta quântica RY realiza uma rotação no qubit alvo ao redor do eixo Y da esfera de Bloch. Ela altera o estado do qubit aplicando um ângulo de rotação especificado, ajustando as amplitudes dos estados 0 e 1. A porta RY é útil em algoritmos quânticos que exigem controle preciso das fases e superposições dos estados quânticos.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/swap_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Swap</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/swap.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>Swap</h2>
+                <p>A porta quântica Swap troca os estados de dois qubits. Se o primeiro qubit está no estado A e o segundo no estado B, após a operação, o primeiro estará em B e o segundo em A. Ela é essencial em circuitos quânticos para reorganizar qubits, facilitando interações entre eles. Sua aplicação é fundamental em algoritmos que requerem ajustes na posição dos estados quânticos.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/controlled_not_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Controlled-NOT</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/controlled_not.gif" alt="Hadamard" class="hadamard-gif" height="400px">
+                <h2>Controlled-NOT</h2>
+                <p>A porta quântica Controlled-NOT (CNOT) atua em dois qubits, um de controle e outro alvo. Se o qubit de controle está no estado 1, ela inverte o estado do qubit alvo (0 para 1 e 1 para 0). Se o qubit de controle está no estado 0, o alvo permanece inalterado. É essencial para criar emaranhamento e realizar operações condicionais em algoritmos quânticos.</p>
+            </div>
+        </div>
+        
+        <div class="card" onclick="openPopup(this)">
+            <img src="esfera/toffoli_logo.png" alt="Juegos de Lengua" class="hadamard-gif">
+            <p>Toffoli</p>
+            <div class="card-content" style="display: none;">
+                <img id="gif" src="/esfera/toffoli.gif" alt="Hadamard" class="img-portas" height="400px">
+                <h2>Toffoli</h2>
+                <p>A porta quântica Toffoli, ou porta CCNOT, atua em três qubits: dois de controle e um alvo. Ela inverte o estado do qubit alvo apenas quando ambos os qubits de controle estão no estado 1. Caso contrário, o alvo permanece inalterado. Essencial para computação reversível e simulação de circuitos lógicos clássicos em sistemas quânticos.</p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Ícone do Card">
+        <h2 id="popup-title">Título</h2>
+        <p id="popup-description">Descrição detalhada</p>
+    </div>
+</div>
+
+<script>
+    function openPopup(card) {
+       
+        const cardContent = card.querySelector('.card-content');
+        const title = cardContent.querySelector('h2').innerText;
+        const description = cardContent.querySelector('p').innerText;
+        const imgSrc = card.querySelector('#gif').src; 
+
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-description').innerText = description;
+        document.getElementById('popup-img').src = imgSrc;
+
+        document.getElementById('popup').style.display = 'flex';
+        document.getElementById('popup-img').style.height = '200px';
+        document.getElementById('popup-img').style.width = '200px';
+
+
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+
+
+</body>
+</html>
