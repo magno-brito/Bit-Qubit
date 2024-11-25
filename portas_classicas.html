@@ -7,6 +7,34 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    body {
+        background-image: 
+        url('/img/background_classico.jpg');  
+            
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: repeat;
+        font-family: 'Georgia', serif; 
+        overflow: hidden;
+      }
+      .content {
+        
+        margin-top: 0px;
+        overflow: hidden;
+    }
+
+   h2{
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 50px; 
+    margin-top: 10px; 
+    font-size: 36px; /* Aumentando o tamanho da fonte */
+    color: rgba(233, 233, 0, 0.849); /* Texto branco */
+    text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; /* Borda preta em todas as direções */
+   }
+  </style>
+
 </head>
 <body>
 
@@ -28,7 +56,7 @@
 </nav>
 
 <div class="content">
-    <h2 style="font-weight: bold; text-align: center; margin-bottom: 50px; margin-top: 10px;color:rgb(1, 56, 5)">Principais Portas Lógicas Clássicas</h2>
+    <h2 >Principais Portas Lógicas Clássicas</h2>
     <div class="card-grid" id="cardGrid">
         
         <div class="card-classico" onclick="openPopup(this)">

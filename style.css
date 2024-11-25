@@ -140,7 +140,7 @@ body, html {
 }
 
 .card-classico {
-    background-color: #51a842;
+    background: linear-gradient(145deg, #a8a5a5, #808080, #595959, #b3b3b3, #404040);
     border-radius: 10px;
     padding: 10px;
     text-align: center;
@@ -173,7 +173,6 @@ body, html {
 
 .card-classico:hover {
     transform: scale(1.05);
-    background-color:#175224;
     color: white;
 }
 

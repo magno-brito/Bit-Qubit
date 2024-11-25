@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Ajustando o estilo para garantir que a Esfera de Bloch tenha tamanho adequado e alinhada com o título */
-
+   
     body {
-      background-image: url('/img/background_inicial.jpg'); 
+      background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), 
+      url('/img/background_inicial5.jpg');      
       background-size: cover; 
       background-position: center; 
-      background-repeat: no-repeat; 
-      font-family: 'Georgia', serif; /* Fonte alterada para Georgia */
+      background-repeat: repeat;
+      font-family: 'Georgia', serif; 
     }
     
-    /* Centralização do conteúdo */
     .container {
       display: flex;
       justify-content: space-evenly;
@@ -26,34 +25,29 @@
       padding-top: 10px;
     }
 
-    /* Container da Esfera de Bloch */
     #blochContainer {
       width: 50%;
       height: 400px;
-      border-radius: 50%; /* Garante que o contêiner tenha bordas arredondadas */
-      overflow: hidden; /* Garante que a esfera se ajuste ao contêiner */
+      border-radius: 50%; 
+      overflow: hidden; 
     }
 
     .cat-img {
       display: block;
-      margin: 0 auto; /* Centraliza a imagem horizontalmente */
-      width: 50%;  /* Reduz o tamanho da imagem */
+      margin: 0 auto; 
+      width: 80%;  
       height: auto;
-      transition: transform 0.3s ease; /* Efeito suave de transição */
+      transition: transform 0.3s ease; 
       position: relative;
     }
 
-    /* Efeito de hover */
-    .cat-img:hover {
-      transform: scale(1.1); /* Aumenta a imagem */
-    }
+   
 
-    /* Título do conteúdo */
     .title {
       font-size: 36px;
       text-align: center;
       margin-top: 10px;
-      color: rgb(69, 3, 85); /* Cor do texto */
+      color: rgb(69, 3, 85); 
     }
 
     /* Botões */
@@ -97,12 +91,9 @@
   </ul>
 </nav>
 
-<!-- Conteúdo principal -->
 <div class="container">
   <div class="content">
-    <!-- Imagem centralizada -->
-    <img src="/img/gato_inicial.png" alt="Gato na Caixa" class="cat-img">
-    <div class="title">BITS & QUBITS</div>
+    <img src="/img/logo2.png" alt="Gato na Caixa" class="cat-img">
     <div class="btn-container">
       <button class="btn" onclick="window.location.href='/bits.html'">Navegue</button>
       <button class="btn" onclick="window.location.href='index.html'">Jogar</button>
