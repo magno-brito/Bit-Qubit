@@ -130,14 +130,24 @@ body, html {
 }
 
 .card {
-    background-color: #ae67bd;
+    background: linear-gradient(145deg, #5a4c6b, #b8a9c9, #5a4c6b); /* Gradiente metálico roxo e prateado */
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 180px;
+    color: #ffffff; /* Contraste com o fundo */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 
+                -4px -4px 8px rgba(255, 255, 255, 0.2); /* Efeito de relevo metálico */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Suaviza as bordas */
 }
+.card:hover {
+    transform: scale(1.05); /* Pequeno efeito de zoom */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5), 
+                -6px -6px 12px rgba(255, 255, 255, 0.3); /* Reforça o relevo no hover */
+}
+
 
 .card-classico {
     background: linear-gradient(145deg, #a8a5a5, #808080, #595959, #b3b3b3, #404040);
@@ -176,6 +186,10 @@ body, html {
     color: white;
 }
 
+
+
+
+
 .popup {
     display: none;
     position: fixed;
@@ -189,7 +203,7 @@ body, html {
 }
 
 .popup-content {
-    background-color: #fff;
+    background-color: green;
     border-radius: 10px;
     width: 80%;
     max-width: 400px;
@@ -199,8 +213,9 @@ body, html {
 }
 
 .popup-content-classico {
-    background-color: #fff;
-    border-radius: 10px;
+    background: linear-gradient(145deg, #a8a5a5, #808080, #595959, #b3b3b3, #404040);
+    border: 2px solid black; /* Adiciona bordas pretas */
+    border-radius: 10px; /* Bordas arredondadas */
     width: 80%;
     max-width: 400px;
     padding: 20px;
@@ -223,9 +238,11 @@ body, html {
 
 .popup-content-classico h2 {
     font-size: 1.2em;
-    color: rgb(6, 32, 3);
+    color: white;
     margin: 10px 0;
     font-weight: bold;
+    font-family: 'Georgia', serif; 
+
 }
 
 .popup-content p {
@@ -239,7 +256,7 @@ body, html {
 
 .popup-content-classico p {
     font-size: 0.9em;
-    color: rgb(0, 128, 21);
+    color: white;
     text-align: justify;
     font-weight: bold;
 

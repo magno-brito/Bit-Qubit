@@ -50,25 +50,30 @@
       color: rgb(69, 3, 85); 
     }
 
-    /* Botões */
     .btn-container {
-      text-align: center;
-      margin-top: 20px;
+      display: flex;
+      gap: 10px; /* Espaçamento entre os botões */
+      justify-content: center; /* Centraliza os botões */
     }
-
+    
     .btn {
-      margin: 10px;
-      background-color: #8a2be2; /* Cor roxa */
-      color: white; /* Texto branco */
-      border: none;
-      font-size: 16px;
-      padding: 10px 20px;
-      cursor: pointer;
+      background: none; /* Remove o fundo padrão */
+      border: none; /* Remove a borda padrão */
+      cursor: pointer; /* Adiciona o cursor de clique */
+      padding: 0; /* Remove o espaçamento interno */
+    }
+    
+    .btn img {
+      width: 150px; /* Largura da imagem */
+      height: 100px; /* Altura proporcional */
+      transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    }
+    
+    .btn img:hover {
+      transform: scale(1.1); /* Amplia a imagem ao passar o mouse */
     }
 
-    .btn:hover {
-      background-color: #6a1b9a; /* Cor roxa mais escura ao passar o mouse */
-    }
+    
 
   </style>
 </head>
@@ -95,12 +100,17 @@
   <div class="content">
     <img src="/img/logo2.png" alt="Gato na Caixa" class="cat-img">
     <div class="btn-container">
-      <button class="btn" onclick="window.location.href='/bits.html'">Navegue</button>
-      <button class="btn" onclick="window.location.href='index.html'">Jogar</button>
+      <!-- Botão com imagem 1 -->
+      <button class="btn" onclick="window.location.href='/bits.html'">
+        <img src="img/navegue1.png" alt="Navegue">
+      </button>
+      <!-- Botão com imagem 2 -->
+      <button class="btn" onclick="window.location.href='index.html'">
+        <img src="img/jogar.png" alt="Jogar">
+      </button>
     </div>
   </div>
 
-  <!-- Esfera de Bloch -->
   <div id="blochContainer"></div>
 </div>
 
