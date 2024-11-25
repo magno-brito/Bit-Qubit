@@ -26,16 +26,26 @@
     }
 
     #blochContainer {
-      width: 50%;
-      height: 400px;
-      border-radius: 50%; 
-      overflow: hidden; 
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Centraliza a imagem */
     }
+    #blochContainer img {
+      width: 80%; /* Tamanho inicial da imagem */
+      height: auto;
+      animation: pulse 2s infinite; /* Define a animação */
+    }
+    
+   
 
     .cat-img {
       display: block;
       margin: 0 auto; 
-      width: 80%;  
+      width: 95%;  
       height: auto;
       transition: transform 0.3s ease; 
       position: relative;
@@ -43,36 +53,39 @@
 
    
 
-    .title {
-      font-size: 36px;
-      text-align: center;
-      margin-top: 10px;
-      color: rgb(69, 3, 85); 
-    }
+   
 
     .btn-container {
       display: flex;
-      gap: 10px; /* Espaçamento entre os botões */
-      justify-content: center; /* Centraliza os botões */
+      gap: 10px; 
+      justify-content: center; 
     }
     
     .btn {
-      background: none; /* Remove o fundo padrão */
-      border: none; /* Remove a borda padrão */
-      cursor: pointer; /* Adiciona o cursor de clique */
-      padding: 0; /* Remove o espaçamento interno */
+      background: none; 
+      border: none; 
+      cursor: pointer; 
+      padding: 0; 
     }
     
     .btn img {
-      width: 150px; /* Largura da imagem */
-      height: 100px; /* Altura proporcional */
-      transition: transform 0.3s ease; /* Animação ao passar o mouse */
+      width: 150px; 
+      height: 100px; 
+      transition: transform 0.3s ease; 
     }
     
     .btn img:hover {
-      transform: scale(1.1); /* Amplia a imagem ao passar o mouse */
+      transform: scale(1.1); 
     }
 
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1.2); /* Tamanho normal */
+      }
+      50% {
+        transform: scale(0.8); /* Aumenta o tamanho */
+      }
+    }
     
 
   </style>
@@ -111,84 +124,11 @@
     </div>
   </div>
 
-  <div id="blochContainer"></div>
+  <div id="blochContainer">
+    <img src="img/logo_esfera2.png" >
+
+  </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-<script>
-  // Configuração básica para a Esfera de Bloch
-  const container = document.getElementById('blochContainer');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
-  camera.position.z = 4;
-
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth, container.clientHeight);
-  container.appendChild(renderer.domElement);
-
-  // Esfera de Bloch
-  const sphereGeometry = new THREE.SphereGeometry(1.5, 32, 32);
-  const sphereMaterial = new THREE.MeshBasicMaterial({
-    color: 0x8a2be2, // Cor roxa escura
-    wireframe: true,
-  });
-  const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-  scene.add(sphere);
-
-  // Eixos
-  const axesMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
-
-  const xAxisGeometry = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(-2, 0, 0),
-    new THREE.Vector3(2, 0, 0),
-  ]);
-  const xAxis = new THREE.Line(xAxisGeometry, axesMaterial);
-  scene.add(xAxis);
-
-  const yAxisGeometry = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(0, -2, 0),
-    new THREE.Vector3(0, 2, 0),
-  ]);
-  const yAxis = new THREE.Line(yAxisGeometry, axesMaterial);
-  scene.add(yAxis);
-
-  const zAxisGeometry = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(0, 0, -2),
-    new THREE.Vector3(0, 0, 2),
-  ]);
-  const zAxis = new THREE.Line(zAxisGeometry, axesMaterial);
-  scene.add(zAxis);
-
-  // Vetor dinâmico
-  const vectorMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 });
-  const vectorGeometry = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(0, 1.5, 0),
-  ]);
-  const vector = new THREE.Line(vectorGeometry, vectorMaterial);
-  scene.add(vector);
-
-  // Animação
-  function animate() {
-    requestAnimationFrame(animate);
-
-    // Rotação
-    sphere.rotation.y += 0.01;
-    xAxis.rotation.y += 0.01;
-    yAxis.rotation.y += 0.01;
-    zAxis.rotation.y += 0.01;
-
-    // Vetor animado
-    const time = Date.now() * 0.002;
-    vector.geometry.setFromPoints([
-      new THREE.Vector3(0, 0, 0),
-      new THREE.Vector3(Math.sin(time), Math.cos(time), Math.sin(time * 0.5)),
-    ]);
-
-    renderer.render(scene, camera);
-  }
-  animate();
-</script>
 
 </body>
 </html>

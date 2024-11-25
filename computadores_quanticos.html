@@ -10,23 +10,19 @@
   <style>
     body {
       font-family: 'Times New Roman', Times, serif; 
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-image:  
-      url('/img/background_computador.jpg');  
       overflow: hidden;
     }
 
-    .content {
+    .content-quantico {
       padding: 20px;
       text-align: center;
       background-image:  
       url('/img/background_computador.jpg');      
       background-size: cover; 
       background-position: center; 
-      background-repeat: repeat;
-      width: 50%;
+      background-repeat: no-repeat;
+      margin-left: 200px;
+      height: 100vh;     
     }
 
     .image-container {
@@ -95,33 +91,33 @@
       background-color: #022950;
     }
 
-    /* Estilos do popup */
     .popup-quantico {
       display: none;
       position: fixed;
       top: 50%;
       left: 60%;
       transform: translate(-50%, -50%);
-      background-color: white;
+      background: linear-gradient(145deg, #001F3F, #003B75, #002B5A); 
       padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
       border-radius: 10px;
       z-index: 1000;
       text-align: center;
       font-size: 16px;
-    }
-
+  }
+  
+  
     .popup-quantico-title {
       font-family: 'Times New Roman', Times, serif; 
       font-size: 20px;
       font-weight: bold;
-      color: #8e44ad;
+      color: #e9c00a;
       margin-bottom: 10px;
     }
 
     .popup-quantico-text {
       font-family: 'Times New Roman', Times, serif; 
-      color: #712592;
+      color: #eede9d;
       text-align: justify;
       font-weight:100;
     }
@@ -190,9 +186,8 @@
   </ul>
 </nav>
 
-<div class="content">
+<div class="content-quantico">
   
- 
   <div class="image-container">
     <img src="/img/arquitetura_computador.png" alt="Arquitetura do Computador">
     <div class="circle circle0" onclick="showPopup('Arquitetura Simplificada.', 'Empresas como IBM, Amazon e Google são as pioneiras no desenvolvimento de computadores quânticos. Com a possibilidade de criar máquinas mais rápidas e extremamente eficientes, essas grandes big tech investem constantemente em pesquisas neste ramo. O Sycamore é um computador quântico criado pelo Google e apresenta uma arquiterua semelhante a mostrada na figura ao lado. Vale ressaltar a a arquitetura física dessas máquinas é muito mais complexa do que a mostrada na figura.')">Info</div>
