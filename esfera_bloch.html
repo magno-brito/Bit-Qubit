@@ -11,14 +11,16 @@
             background-color: white;
             height: 100%;
             margin: 0;
-            overflow-x: hidden; /* Evita o scroll horizontal */
+            overflow-x: hidden; 
+            font-family: 'Georgia', serif; 
+
         }
         #content {
             margin-left: 200px;
             display: flex;
-            flex-direction: row; /* Muda para linha */
+            flex-direction: row; 
             min-height: 100vh;
-            width: calc(100% - 200px); /* Para não ultrapassar a largura da tela */
+            width: calc(100% - 200px); 
         }
 
         #bloch-sphere-container {
@@ -26,22 +28,26 @@
             justify-content: center;
             align-items: center;
             background-color: white;
-            height: 60%; /* Ajuste para 60% da altura da tela */
-            max-height: 500px; /* Limite a altura máxima da esfera */
-            width: 60%; /* Ajuste para 60% da largura da tela */
+            height: 60%; 
+            max-height: 500px; 
+            width: 60%; 
         }
 
         #controls-container {
-            background-color: white;
-            color: purple;
+            background: linear-gradient(145deg, #5f0253, #84719b, #0a0016); 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 10px 20px; /* Menos padding para aproximar os elementos */
-            min-height: 60%; /* Ajuste para 60% da altura da tela */
-            width: 40%; /* Ajuste para 40% da largura da tela */
+            padding: 10px 20px; 
+            min-height: 60%; 
+            width: 40%;
             overflow: auto;
+            height: 50%;
+            margin-right: 50px;
+            margin-top:50px;
+            border-radius: 20px;
+            
         }
 
         .button-row {
@@ -56,11 +62,13 @@
             font-size: 14px; /* Tamanho da fonte menor */
         }
 
-        .value-display {
-            margin-top: 10px; /* Menos margem entre os valores */
-            text-align: center;
-            font-size: 14px;  /* Fonte menor */
+        .texto {
+            color:rgb(241, 238, 238);
+            text-align: justify;
+            margin-top: 20px;
         }
+
+        
     </style>
 </head>
 <body>
@@ -84,9 +92,9 @@
     <div id="content">
         <div id="bloch-sphere-container"></div>
 
-        <div id="controls-container">
-            <h3>Ações sobre a Esfera de Bloch</h3>
-            <div class="button-row">
+        <div id="controls-container" >
+            <img src="/img/logo_esfera1.png" width="300px" alt="">
+            <div class="button-row" style="margin-top: 20px;">
                 <button class="btn btn-primary" onclick="applyPauliX()">Pauli-X</button>
                 <button class="btn btn-secondary" onclick="applyPauliY()">Pauli-Y</button>
                 <button class="btn btn-info" onclick="applyPauliZ()">Pauli-Z</button>
@@ -96,10 +104,14 @@
                 <button class="btn btn-danger" onclick="applyIdentity()">Identidade</button>
                 <button class="btn btn-warning" onclick="resetQubit()">Resetar</button>
             </div>
-            <div class="value-display">
+            <div style="display:none">
                 <p>θ (Theta): <span id="theta-value">π/2</span></p>
                 <p>φ (Phi): <span id="phi-value">0</span></p>
             </div>
+            <div class="texto">
+                <p>A esfera de Bloch é uma representação visual usada na computação quântica para descrever o estado de um qubit, que é a unidade básica de informação quântica. Nela, um estado quântico é representado como um ponto em uma esfera tridimensional. Os polos correspondem aos estados base |0⟩ e |1⟩, enquanto estados intermediários combinam esses valores. Essa visualização ajuda a entender superposição e manipulação de qubits.</p>
+            </div>
+            
         </div>
     </div>
 

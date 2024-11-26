@@ -10,31 +10,28 @@
   <style>
 
     body {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), 
-      url('/img/background_inicial5.jpg');      
+      background-image: url('/img/background_inicial5.jpg');      
       background-size: cover; 
       background-position: center; 
       background-repeat: repeat;
       font-family: 'Georgia', serif; 
+      overflow: hidden;
     }
 
   
-    .game-title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: rgb(1, 56, 5);
-      margin-bottom: 30px;
-    }
 
     .instruction-container {
       padding: 10px;
       border-radius: 8px;
       margin-bottom: 10px;
       display: flex;
-      align-items: center; /* Alinha o conteúdo na vertical */
-      justify-content: space-between; /* Espaço entre texto e imagem */
-      background-color: #9b59b6; /* Tom roxo claro */
+      align-items: center; 
+      justify-content: space-between; 
+      background-color: #9b59b6; 
+
     }
+
+
 
     .key-icon {
       width: 100px;
@@ -85,71 +82,71 @@
 
     @keyframes moveCat {
       from {
-        background-position: 0 0; /* Primeiro frame */
+        background-position: 0 0; 
       }
       to {
-        background-position: -768px 0; /* Deslocamento total (12 frames × 64px) */
+        background-position: -768px 0; 
       }
     }
 
     @keyframes moveDoor {
       from {
-        background-position: 0 0; /* Primeiro frame */
+        background-position: 0 0;
       }
       to {
-        background-position: -374px 0; /* Deslocamento total (12 frames × 64px) */
+        background-position: -374px 0; 
       }
     }
 
     @keyframes moveFire1 {
       from {
-        background-position: 0 0; /* Primeiro frame */
+        background-position: 0 0; 
       }
       to {
-        background-position: -519px 0; /* Deslocamento total (12 frames × 64px) */
+        background-position: -519px 0; 
       }
     }
 
     @keyframes moveFire {
       from {
-        background-position: 0 0; /* Primeiro frame */
+        background-position: 0 0; 
       }
       to {
-        background-position: -774px 0; /* Deslocamento total (12 frames × 64px) */
+        background-position: -774px 0; 
       }
     }
 
     body {
-      margin-left: 220px;
+      margin-left: 200px;
     }
 
     h3 {
       color: rgb(1, 56, 5);
     }
 
-    /* Estilo para os containers lado a lado */
     .instruction-container-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      
     }
 
     .instruction-container-wrapper .instruction-container {
-      flex: 0 0 48%; /* Cada container ocupa 48% da largura */
+      flex: 0 0 48%; 
       margin-bottom: 15px;
     }
 
-    /* Tom de roxo claro para o fundo dos cards */
+    
     .instruction-container.bg-primary {
-      background-color: #9b59b6; /* Tom roxo claro */
+      background-color: #9b59b6; 
     }
 
     .instruction-container.bg-success {
-      background-color: #8e44ad; /* Tom roxo claro */
+      background-color: #8e44ad; 
     }
 
     .instruction-container.bg-info {
-      background-color: #9b59b6; /* Tom roxo claro */
+      background-color: #9b59b6; 
     }
   </style>
 </head>
@@ -172,11 +169,12 @@
   </ul>
 </nav>
 
-<div class="container text-center">
-  <h1 class="game-title">Como Jogar</h1>
+<div class="container text-center" >
+  <div>
+    <img style="margin-top: 20px; margin-bottom:30px" src="/img/como_jogar.png" width="450px" alt="">
+  </div>
 
   <div class="instruction-container-wrapper">
-    <!-- Primeira linha de dois containers -->
     <div class="instruction-container bg-success text-white">
       <img src="/img/a_w_d.png" style="width: 30%;" alt="WASD" class="key-icon">
       <p class="instruction-text">
@@ -194,7 +192,6 @@
 
     </div>
 
-    <!-- Segunda linha de dois containers -->
     <div class="instruction-container bg-danger text-white">
       <div class="fire-animation"></div>
       <p class="instruction-text">
