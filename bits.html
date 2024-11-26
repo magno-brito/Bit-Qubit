@@ -10,10 +10,10 @@
   <style>
     body {
       margin-left: 200px;
-      font-family: 'Times New Roman', Times, serif; 
+      font-family: 'Georgia', serif; 
       font-size: 10pt;
-      background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), 
-      url('/img/background_bit.jpg');  
+      background-image:  
+      url('/img/background_bit4.jpg');  
       background-size: cover; 
       background-position: center; 
       background-repeat: repeat;
@@ -38,12 +38,19 @@
     }
 
     .text-container {
-      color: rgb(1, 56, 5);
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.2); 
+      backdrop-filter: blur(10px); 
+      border-radius: 10px;
+      padding: 10px;
       text-align: justify;
-      font-size: 12pt;
-      display: flex;
-      flex-direction: column;
+      color: black; 
+      font-size: 14px;
+      overflow: hidden;
     }
+
+    
 
     .text-container img {
       width: 100px;
@@ -73,6 +80,19 @@
     img:hover{
       transform: scale(1.15);
     }
+    .bit-image {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+      width: 150px; /* Ajuste o tamanho da imagem, se necessário */
+    }
+
+    #topo{
+      width: 150px; 
+      float:none;
+      margin-left: 170px;
+      margin-bottom: 20px;
+    }
 
 
   </style>
@@ -99,8 +119,10 @@
 <div class="container">
   <div class="two-columns">
     <div class="col-md-6">
+      
       <div class="text-container">
-        <img style="margin-left: 170px; width: 150px; margin-bottom: 40px" src="img/bit.png" >
+          <img id="topo" src="img/bit.png" alt="Bit">
+
         <p>O bit é a unidade fundamental da <b>computação clássica</b>, representando a menor quantidade de informação, podendo assumir os valores <b>0</b> ou <b>1</b>. Ele serve como base para <b>operações lógicas e aritméticas</b> em sistemas digitais, formando a espinha dorsal de processadores, memórias e todo o funcionamento de computadores clássicos.</p>
 
         <p><img src="img/valvula.png" alt="Exemplo 1">A história dos bits começa com as <b>válvulas eletrônicas</b>, inventadas no início do século XX. Elas eram usadas para controlar a passagem de corrente elétrica, permitindo que os circuitos estivessem "ligados" (1) ou "desligados" (0). Esse <b>comportamento binário</b>, essencial para a computação, pavimentou o caminho para os sistemas digitais. As válvulas foram fundamentais na criação dos primeiros computadores eletrônicos, como o ENIAC, no final da década de 1940. Com o tempo, as válvulas deram lugar aos transistores, menores e mais eficientes, mas a ideia do bit binário permaneceu central na computação moderna.</p>
