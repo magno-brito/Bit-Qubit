@@ -9,15 +9,19 @@
 
   <style>
     body {
-      margin-left: 220px;
-      font-family: 'Times New Roman', Times, serif; 
+      margin-left: 200px;
+      font-family: 'Georgia', serif; 
       font-size: 10pt;
-
-
+      background-image:  
+      url('/img/background_bit2.jpg');  
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: repeat;
+      height: 100vh;
     }
 
     .container {
-      margin-top: 30px;
+      padding-top: 20px;
     }
 
     .row {
@@ -32,12 +36,22 @@
     }
 
     .text-container {
-      color: purple;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.2); 
+      backdrop-filter: blur(10px); 
+      border-radius: 10px;
+      padding: 20px;
       text-align: justify;
-      font-size: 12pt;
-      display: flex;
-      flex-direction: column;
+      color: black; 
+      font-size: 14px;
+      overflow: hidden;
+      height: 550px;
+      margin-top:30px
+
     }
+
+    
 
     .text-container img {
       width: 100px;
@@ -49,7 +63,7 @@
     }
 
     h3 {
-      color: rgb(39, 4, 39);
+      color: rgb(1, 56, 5);
       margin-bottom: 15px;
       font-weight: bold;
     }
@@ -66,6 +80,19 @@
 
     img:hover{
       transform: scale(1.15);
+    }
+    .bit-image {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+      width: 150px; /* Ajuste o tamanho da imagem, se necessário */
+    }
+
+    #topo{
+      width: 150px; 
+      float:none;
+      margin-left: 170px;
+      margin-bottom: 20px;
     }
 
 
@@ -94,7 +121,7 @@
   <div class="two-columns">
     <div class="col-md-6">
       <div class="text-container">
-        <img style="margin-left: 170px; width: 170px; margin-bottom: 40px" src="img/qubit.png" >
+        <img id="topo" src="img/qubit.png" >
         <p>O <b>qubit (quantum bit)</b> é a unidade fundamental de informação na computação quântica, similar ao bit na computação clássica, mas com a diferença de que pode representar <b>simultaneamente</b> 0 e 1 devido à <b>superposição</b>. Isso permite que os qubits realizem múltiplos cálculos ao mesmo tempo, aumentando significativamente a capacidade de processamento.</p>
 
         <p><img src="img/feynman.png" alt="Exemplo 1">Richard Feynman, físico renomado, é considerado o <b>pai da computação quântica</b> devido às suas ideias revolucionárias nos anos 1980. Ele foi o primeiro a sugerir que sistemas quânticos poderiam ser usados para <b>simular outros sistemas quânticos</b>  de forma mais eficiente do que os computadores clássicos. Suas teorias sobre a natureza quântica das partículas inspiraram o desenvolvimento de <b>algoritmos quânticos</b> e a criação de computadores quânticos, transformando a computação como conhecemos.</p>
