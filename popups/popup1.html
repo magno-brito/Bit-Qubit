@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="/popups/style.css">
 </head>
 <body>
-    <div class="card">
+    <div class="card-popup">
         <div class="title">Mecânica Quântica</div>
         <div class="cost">1</div>
         <div class="image">
@@ -23,7 +23,6 @@
 
     <script>
         function closeCard() {
-            // Envia um evento para informar ao jogo que o popup deve ser fechado
             if (window.parent && window.parent.closePopup) {
                 window.parent.closePopup();
             }

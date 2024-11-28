@@ -12,9 +12,9 @@ body {
     background-color: #333;
 }
 
-.card {
+.card-popup {
     width: 300px;
-    height: 500px; /* Altura fixa para uniformizar as cartas */
+    height: 500px; 
     background: #34495e;
     border: 3px solid white;
     border-radius: 10px;
@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
 }
 
-.card .title {
+.card-popup .title {
     font-size: 1rem;
     font-weight: bold;
     padding: 5px;
@@ -37,7 +37,7 @@ body {
     border: 2px solid white;
 }
 
-.card .cost {
+.card-popup .cost {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -49,30 +49,30 @@ body {
     color: white;
 }
 
-.card .image {
-    flex-grow: 1; /* Garante que a imagem ocupe espaço disponível */
+.card-popup .image {
+    flex-grow: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px 0;
 }
 
-.card .image img {
+.card-popup .image img {
     width: 100%;
-    height: 200px; /* Altura fixa para uniformizar as imagens */
-    object-fit: cover; /* Ajusta a imagem sem distorcer */
-    border: 2px solid white;
-    border-radius: 5px;
+    height: 180px; 
+    max-height: 180px; 
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.card .stats {
+.card-popup .stats {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
 }
 
-.card .stats .power {
+.card-popup .stats .power {
     background-color: #333;
     border: 2px solid white;
     padding: 5px 15px;
@@ -80,7 +80,7 @@ body {
     border-radius: 5px;
 }
 
-.card .stats .type {
+.card-popup .stats .type {
     background-color: #333;
     border: 2px solid white;
     padding: 5px 10px;
@@ -88,22 +88,31 @@ body {
     border-radius: 5px;
 }
 
-.card .description {
-    margin-top: 15px;
+.card-popup .description {
+    flex-grow: 1; 
     padding: 10px;
     background-color: #555;
     border: 2px solid white;
     border-radius: 5px;
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
+    line-height: 1.2;
     text-align: justify;
+    min-height: 150px; /* Aumenta a altura mínima da descrição */
+    max-height: 150px; /* Limita a altura máxima */
+    overflow-y: auto; /* Ativa a rolagem somente quando necessário */
+}
+
+
+.card-popup .description p {
+    color: white;
 }
 
 .actions {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 10px; /* Empurra o botão para o final do card */
 }
+
 
 .actions button {
     background-color: green; 

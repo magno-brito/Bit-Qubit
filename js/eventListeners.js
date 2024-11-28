@@ -3,7 +3,7 @@ let isNearApagador = false;
 let ativadorFire = true;
 const MARGIN_DOOR_COLLISION = 10;
 let correctAnswer = false;
-let popupShown = { computer: false, door: false, lost: false }; // Controle separado por tipo
+let popupShown = { computer: false, door: false, lost: false }; 
 let fase = 1;
 
 function showPopup(nome, fase, type) {

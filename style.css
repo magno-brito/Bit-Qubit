@@ -188,8 +188,6 @@ body, html {
 
 
 
-
-
 .popup {
     display: none;
     position: fixed;
@@ -202,7 +200,7 @@ body, html {
     align-items: center;
 }
 
-.popup-content {
+/* .popup-content {
     background-color: blue;
     border-radius: 10px;
     width: 80%;
@@ -210,7 +208,7 @@ body, html {
     padding: 20px;
     text-align: center;
     position: relative;
-}
+} */
 
 .popup-content-classico {
     background: linear-gradient(145deg, #a8a5a5, #808080, #595959, #b3b3b3, #404040);
