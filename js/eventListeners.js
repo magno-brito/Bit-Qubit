@@ -82,10 +82,14 @@ function closePopup(type) {
       console.log('Porta aberta!');
     }, 2000);
   } else if (type === 'lost') {
-    setTimeout(() => location.reload(), 5000); // Reinicia após perder
+    setTimeout(() => {
+      location.reload(); 
+      isCollidingEnabled = true; 
+    }, 5000); 
   }
+  isCollidingEnabled = true; 
 
-  popupShown[type] = false; // Permite reabrir o popup desse tipo
+  popupShown[type] = false; 
 }
 
 function showGameFeedback(message, color) {
@@ -149,12 +153,14 @@ function isColliding(rect1, rect2, margin = 0) {
   );
 }
 
+
 function checkPlayerFireCollision() {
-  if (ativadorFire) {
+  if (ativadorFire && isCollidingEnabled) {
     fires.forEach((fire) => {
       if (fire.opacity > 0 && isColliding(player, fire, 10) && !popupShown.lost) {
         popupShown.lost = true;
         showPopup('lost.html', 0, 'lost');
+        isCollidingEnabled = false; // Desabilitar detecção de colisão após o "perdeu"
       }
     });
   }

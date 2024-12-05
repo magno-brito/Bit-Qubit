@@ -52,6 +52,17 @@
       align-items: center;
       height: 100vh;
     }
+    #image-container img {
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      border-color: white;
+    }
+    #canvas-container {
+      display: none;
+    }
     canvas {
       display: block;
       width: 800px;
@@ -75,12 +86,33 @@
     <li class="nav-item"><a class="nav-link" href="/computadores_quanticos.html">Computadores Quânticos</a></li>
     <li class="nav-item"><a class="nav-link" href="/sobre_jogo.html">Sobre o Jogo</a></li>
     <li class="nav-item"><a class="nav-link" href="index.html">Jogar</a></li>
-</ul>
+  </ul>
 </nav>
 
 <div class="content">
-  <canvas></canvas>
+  <!-- Contêiner para a imagem -->
+  <div id="image-container">
+    <img src="/img/pagina/0.png" alt="Imagem Temporária">
+  </div>
+
+  <!-- Contêiner para o canvas -->
+  <div id="canvas-container">
+    <canvas></canvas>
+  </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageContainer = document.getElementById("image-container");
+    const canvasContainer = document.getElementById("canvas-container");
+
+    // Exibir imagem por 5 segundos
+    setTimeout(() => {
+      imageContainer.style.display = "none"; // Ocultar a imagem
+      canvasContainer.style.display = "block"; // Mostrar o canvas
+    }, 5000);
+  });
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/utils.js"></script>

@@ -21,17 +21,11 @@ class Player extends Sprite {
 
   update() {
 
-    // c.fillStyle = 'rgba(0, 0, 255, 0.5)'
     c.fillRect(this.position.x, this.position.y , this.width, this.height)
-
-
     this.position.x += this.velocity.x
-
     this.updateHitbox()
-
     this.checkForHorizontalCollisions()
     this.applyGravity()
-
     this.updateHitbox()
 
     c.fillRect(
@@ -41,7 +35,7 @@ class Player extends Sprite {
       this.hitbox.height
     )
     this.checkForVerticalCollisions()
-    c.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    c.fillStyle = 'rgba(0, 0, 0, 0)';
     c.fillRect(this.hitbox.position.x, this.hitbox.position.y, this.hitbox.width, this.hitbox.height);
   }
 
@@ -105,10 +99,9 @@ class Player extends Sprite {
       c.quadraticCurveTo(x, y, x + radius, y);
       c.closePath();
 
-      // Define a cor de preenchimento com um brilho
       let gradient = c.createLinearGradient(x, y, x, y + height);
-      gradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)'); // Cor do brilho no topo
-      gradient.addColorStop(1, color); // Cor principal
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'); 
+      gradient.addColorStop(1, color); 
 
       c.fillStyle = gradient;
       c.fill();

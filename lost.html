@@ -1,40 +1,53 @@
-<style>
-  .popup-content-lost {
-    background-image: url(./img/pagina/sad_cat.jpg);
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    
-    padding: 20px;
-    width: 400px; 
-    height: 300px; 
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 8px; 
-    border: none; 
-    font-family: 'Arial', sans-serif; 
-  }
-  
-  .popup-content-lost h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: white; 
-  }
-  
-  .popup-content-lost p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: white; 
-  }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Over</title>
+  <style>
+    .popup-content-lost {
+      background-image: url("/popups/img/lost.png");
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat; 
+      padding: 20px;
+      width: 400px; 
+      height: 400px; 
+      text-align: center;
+      position: fixed; 
+      top: 50%;
+      left: 60%; 
+      transform: translate(-50%, -50%); 
+      border-radius: 10px; 
+    }
+
+    .close-button {
+      position: absolute; 
+      top: 10px; 
+      right: 10px; 
+      background-color: #ffe600;
+      color: white; 
+      font-size: 25px; 
+      width: 40px; 
+      height: 40px;
+      border: none; 
+      border-radius: 50%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      cursor: pointer; 
+      transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+
+    .close-button:hover {
+      background-color: #ff7728; 
+      transform: scale(1.1); 
+    }
   </style>
-
-
-<div class="popup-content-lost">
-  <h2>Você encostou!</h2>
-  <p>Tente novamente</p>
-</div>
-
-
+</head>
+<body>
+  <div class="popup-content-lost">
+    <button class="close-button" onclick="window.location.href='index.html'">X</button>
+  </div>
+</body>
+</html>

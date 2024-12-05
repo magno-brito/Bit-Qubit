@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Inicial</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000; /* Cor de fundo padrão */
+    }
+
+    .container {
+      width: 1024px;
+      height: 576px;
+      background-image: url('./img/pagina/0.png'); /* Caminho para o background */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .start-button {
+      background-color: #ffe600;
+      color: #000;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .start-button:hover {
+      background-color: #ff7728;
+      color: white;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="start-button" onclick="window.location.href='index.html'">Iniciar</button>
+  </div>
+</body>
+</html>
