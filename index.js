@@ -72,7 +72,7 @@ const player = new Player({
   },
 })
 
-let level = 7
+let level = 14
 
 
 let levels = {
@@ -961,7 +961,7 @@ let levels = {
         new Sprite({
           position: {
             x: 55,
-            y: 440,
+            y: 425,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -974,7 +974,7 @@ let levels = {
         new Sprite({
           position: {
             x: 630,
-            y: 440,
+            y: 435,
           },
           imageSrc: './img/pagina/computer.png',
           frameRate: 1,
@@ -1090,7 +1090,7 @@ let levels = {
         new Sprite({
           position: {
             x: 750,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1103,7 +1103,7 @@ let levels = {
         new Sprite({
           position: {
             x: 200,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1116,7 +1116,7 @@ let levels = {
         new Sprite({
           position: {
             x: 100,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1132,7 +1132,7 @@ let levels = {
         new Sprite({
           position: {
             x: 400,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/apagador.png',
           frameRate: 1,
@@ -1170,7 +1170,7 @@ let levels = {
         new Sprite({
           position: {
             x: 480,
-            y: 175,
+            y: 170,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -1183,7 +1183,7 @@ let levels = {
         new Sprite({
           position: {
             x: 880,
-            y: 445,
+            y: 435,
           },
           imageSrc: './img/pagina/computer.png',
           frameRate: 1,
@@ -1197,7 +1197,7 @@ let levels = {
         new Sprite({
           position: {
             x: 700,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1284,7 +1284,7 @@ let levels = {
         new Sprite({
           position: {
             x: 900,
-            y: 110,
+            y: 95,
           },
           imageSrc: './img/pagina/apagador.png',
           frameRate: 1,
@@ -1320,7 +1320,7 @@ let levels = {
         new Sprite({
           position: {
             x: 60,
-            y: 430,
+            y: 425,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -1333,7 +1333,7 @@ let levels = {
         new Sprite({
           position: {
             x: 50,
-            y: 50,
+            y: 52,
           },
           imageSrc: './img/pagina/computer1.png',
           frameRate: 1,
@@ -1347,7 +1347,7 @@ let levels = {
         new Sprite({
           position: {
             x: 200,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1360,7 +1360,7 @@ let levels = {
         new Sprite({
           position: {
             x: 880,
-            y: 290,
+            y: 283,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1372,7 +1372,7 @@ let levels = {
         new Sprite({
           position: {
             x: 780,
-            y: 290,
+            y: 283,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1386,7 +1386,7 @@ let levels = {
         new Sprite({
           position: {
             x: 80,
-            y: 290,
+            y: 283,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1399,7 +1399,7 @@ let levels = {
         new Sprite({
           position: {
             x: 180,
-            y: 290,
+            y: 283,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1569,7 +1569,7 @@ let levels = {
         new Sprite({
           position: {
             x: 170,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1596,7 +1596,7 @@ let levels = {
         new Sprite({
           position: {
             x: 370,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1610,7 +1610,7 @@ let levels = {
         new Sprite({
           position: {
             x: 270,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1624,7 +1624,7 @@ let levels = {
         new Sprite({
           position: {
             x: 470,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1637,7 +1637,7 @@ let levels = {
         new Sprite({
           position: {
             x: 570,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1653,7 +1653,7 @@ let levels = {
         new Sprite({
           position: {
             x: 850,
-            y: 425,
+            y: 418,
           },
           imageSrc: './img/pagina/apagador.png',
           frameRate: 1,
@@ -1691,7 +1691,7 @@ let levels = {
         new Sprite({
           position: {
             x: 60,
-            y: 430,
+            y: 428,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -1704,7 +1704,7 @@ let levels = {
         new Sprite({
           position: {
             x: 880,
-            y: 60,
+            y: 50,
           },
           imageSrc: './img/pagina/computer.png',
           frameRate: 1,
@@ -1752,7 +1752,7 @@ let levels = {
         new Sprite({
           position: {
             x: 100,
-            y: 420,
+            y: 415,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1766,7 +1766,7 @@ let levels = {
         new Sprite({
           position: {
             x: 200,
-            y: 160,
+            y: 155,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -1826,7 +1826,7 @@ let levels = {
         new Sprite({
           position: {
             x: 480,
-            y: 300,
+            y: 295,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -1839,7 +1839,7 @@ let levels = {
         new Sprite({
           position: {
             x: 450,
-            y: 45,
+            y: 50,
           },
           imageSrc: './img/pagina/computer1.png',
           frameRate: 1,
@@ -1920,7 +1920,7 @@ let levels = {
         new Sprite({
           position: {
             x: 50,
-            y: 165,
+            y: 160,
           },
           imageSrc: './img/pagina/apagador.png',
           frameRate: 1,
@@ -1937,6 +1937,7 @@ let levels = {
 
     },
   },
+
   14: {
     init: () => {
       parsedCollisions = collisionsLevel14.parse2D()
@@ -2020,7 +2021,6 @@ let levels = {
       ]
 
       fires = [
-
         new Sprite({
           position: {
             x: 100,
