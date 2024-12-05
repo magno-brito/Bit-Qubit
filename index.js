@@ -72,7 +72,7 @@ const player = new Player({
   },
 })
 
-let level = 14
+let level = 1
 
 
 let levels = {
