@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Won tne Game</title>
+  <style>
+    .popup-content-lost {
+      background-image: url("/img/won.png");
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat; 
+      padding: 20px;
+      width: 600px; 
+      height: 600px; 
+      text-align: center;
+      position: fixed; 
+      top: 50%;
+      left: 60%; 
+      transform: translate(-50%, -50%); 
+      border-radius: 10px; 
+    }
+
+    .close-button {
+      position: absolute; 
+      top: 10px; 
+      right: 10px; 
+      background-color: #ffe600;
+      color: white; 
+      font-size: 25px; 
+      width: 40px; 
+      height: 40px;
+      border: none; 
+      border-radius: 50%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      cursor: pointer; 
+      transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+
+    .close-button:hover {
+      background-color: #ff7728; 
+      transform: scale(1.1); 
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-content-lost">
+    <button class="close-button" onclick="window.location.href='index.html'">X</button>
+  </div>
+</body>
+</html>

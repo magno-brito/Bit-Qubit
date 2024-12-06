@@ -60,7 +60,10 @@ const player = new Player({
           opacity: 1,
           onComplete: () => {
             level++;
-            if (level === 18) level = 1;
+            if (level === 18){
+              showPopup('popup.html', 18)
+              level = 1;
+            }
             levels[level].init();
             player.switchSprite('idleRight');
             player.preventInput = false;
@@ -72,10 +75,12 @@ const player = new Player({
   },
 })
 
-let level = 1
+let level = 17
 
 
 let levels = {
+
+
 
 
   1: {
@@ -1973,7 +1978,7 @@ let levels = {
         new Sprite({
           position: {
             x: 50,
-            y: 250,
+            y: 248,
           },
           imageSrc: './img/pagina/computer1.png',
           frameRate: 1,
@@ -2108,7 +2113,7 @@ let levels = {
         new Sprite({
           position: {
             x: 750,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -2122,7 +2127,7 @@ let levels = {
         new Sprite({
           position: {
             x: 800,
-            y: 420,
+            y: 410,
           },
           imageSrc: './img/pagina/fire3.png',
           frameRate: 8,
@@ -2138,7 +2143,7 @@ let levels = {
         new Sprite({
           position: {
             x: 900,
-            y: 425,
+            y: 415,
           },
           imageSrc: './img/pagina/apagador.png',
           frameRate: 1,
@@ -2179,7 +2184,7 @@ let levels = {
         new Sprite({
           position: {
             x: 60,
-            y: 430,
+            y: 435,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -2507,7 +2512,7 @@ let levels = {
         new Sprite({
           position: {
             x: 50,
-            y: 450,
+            y: 438,
           },
           imageSrc: './img/pagina/computer1.png',
           frameRate: 1,
@@ -2709,7 +2714,7 @@ let levels = {
         new Sprite({
           position: {
             x: 900,
-            y: 435,
+            y: 423,
           },
           imageSrc: 'img/doors/doorTest2.png',
           frameRate: 6,
@@ -2722,7 +2727,7 @@ let levels = {
         new Sprite({
           position: {
             x: 50,
-            y: 445,
+            y: 435,
           },
           imageSrc: './img/pagina/computer1.png',
           frameRate: 1,

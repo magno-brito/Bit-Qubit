@@ -18,7 +18,7 @@ Array.prototype.createObjectsFrom2D = function () {
               x: x * 64,
               y: y * 64,
             },
-            movable: symbol === 293,  // Somente os blocos com o valor 293 serão móveis
+            movable: symbol === 293,  
           })
         )
       }

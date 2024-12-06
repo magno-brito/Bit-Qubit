@@ -86,10 +86,10 @@ function closePopup(type) {
       location.reload(); 
       isCollidingEnabled = true; 
     }, 5000); 
-  }
+  } 
   isCollidingEnabled = true; 
-
   popupShown[type] = false; 
+  
 }
 
 function showGameFeedback(message, color) {
@@ -160,7 +160,7 @@ function checkPlayerFireCollision() {
       if (fire.opacity > 0 && isColliding(player, fire, 10) && !popupShown.lost) {
         popupShown.lost = true;
         showPopup('lost.html', 0, 'lost');
-        isCollidingEnabled = false; // Desabilitar detecção de colisão após o "perdeu"
+        isCollidingEnabled = false; 
       }
     });
   }
