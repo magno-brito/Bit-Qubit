@@ -181,3 +181,13 @@ function closeCard() {
       window.parent.closePopup();
   }
 } 
+
+
+function reloadLevel() {
+  
+  levels[level].init();
+  player.velocity = { x: 0, y: 0 }; 
+  overlay.opacity = 0; 
+  popupShown = false; 
+  isCollidingEnabled = true; 
+}
